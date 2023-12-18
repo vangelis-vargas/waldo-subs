@@ -2,7 +2,8 @@ name: Mobile Waldo Subscribers
 on:
   workflow_dispatch:
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Test Greeting
-      run: "hello nena!"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Greeting
+        run: "hello nena!"
