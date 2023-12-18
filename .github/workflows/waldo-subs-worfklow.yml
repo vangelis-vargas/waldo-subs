@@ -1,10 +1,8 @@
 name: Mobile Waldo Subscribers
-on:
-  push:
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Test Greeting
-        run: "hello nena"
+        run: echo "hello nena"
