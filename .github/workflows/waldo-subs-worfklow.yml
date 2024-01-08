@@ -9,3 +9,6 @@ jobs:
     steps:
       - name: Test Greeting
         run: echo "Waldo has successfully triggered this workflow"
+
+      - name: Print email
+        run: echo "the email is ${{ github.event.client_payload.username }}"
