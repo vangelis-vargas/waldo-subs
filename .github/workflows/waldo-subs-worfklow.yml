@@ -1,6 +1,9 @@
 name: Mobile Waldo Subscribers
 on: 
   workflow_dispatch:
+    inputs:
+      email:
+        type: string
   repository_dispatch:
     types: [create_sub]
 jobs:
@@ -11,4 +14,4 @@ jobs:
         run: echo "Waldo has successfully triggered this workflow"
 
       - name: Print email
-        run: echo "the email is ${{ github.event.client_payload.email }}"
+        run: echo "the email is ${{ github.event.inputs.email }}"
