@@ -6,6 +6,8 @@ on:
         type: string
   repository_dispatch:
     types: [create_sub]
+permissions:
+  actions: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
