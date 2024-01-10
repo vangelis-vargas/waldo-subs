@@ -3,6 +3,8 @@ on:
   workflow_dispatch:
     inputs:
       email:
+        description: 'waldo user email'
+        required: true
         type: string
   repository_dispatch:
 jobs:
@@ -14,3 +16,4 @@ jobs:
 
       - name: Print email
         run: echo "the email is ${{ github.event.inputs.email }}"
+
