@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       email:
-        description: 'waldo user email'
-        required: true
         type: string
+  repository_dispatch:
+    types: [create_sub]
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -14,5 +14,4 @@ jobs:
         run: echo "Waldo has successfully triggered this workflow"
 
       - name: Print email
-        run: echo "the email is ${{ github.event.inputs.email }}"
-
+        run: echo "the email is ${{ inputs.email }}"
