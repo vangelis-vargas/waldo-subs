@@ -6,7 +6,6 @@ on:
         description: 'waldo user email'
         required: true
         type: string
-  repository_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
